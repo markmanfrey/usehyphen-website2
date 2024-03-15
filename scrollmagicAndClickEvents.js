@@ -1,4 +1,3 @@
-<script>
     var cursorXray = document.getElementById('cursorXray');
     var cursorResize = document.getElementById('cursorResize');
     var offsetkitchenHalf1 = document.getElementById('offsetKitchenHalf1');
@@ -228,5 +227,3 @@
     window.addEventListener('scroll', function() {
         updateCursorVisibility();
     });
-
-</script>
