@@ -90,6 +90,14 @@ var playerAzimuth = cld.videoPlayer('cloudinaryAzimuthVideo', {
     sourceTypes: ['mp4'],
     transformation: { quality: 'auto:best' }
 });
+var playerFull = cld.videoPlayer('cloudinaryFullVideo', {
+    autoplay: false,
+    loop: false,
+    muted: true,
+    controls: false,
+    sourceTypes: ['mp4'],
+    transformation: { quality: 'auto:best' }
+});
 
 const toggleButton = document.querySelector("#cursorXray");
 let isVideoPlaying = false;
