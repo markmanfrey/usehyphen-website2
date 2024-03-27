@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", function() {
     setTimeout(function() {
       if(window.location.hash) {
         const id = window.location.hash;
-        const element = document.querySelector(id);
+        const element = document.querySelector(productOverview);
         if(element) {
           window.scrollTo({
             top: element.offsetTop,
