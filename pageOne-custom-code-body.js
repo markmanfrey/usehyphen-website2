@@ -89,6 +89,19 @@ const pauseIconUrl = 'https://uploads-ssl.webflow.com/65aad9ed9c946a529975e7cd/6
 const playIconUrl = 'https://uploads-ssl.webflow.com/65aad9ed9c946a529975e7cd/65f346e3d682ea1b918a56ed_cursorXrayPlay.png';
 
 document.addEventListener("DOMContentLoaded", function() {
+    setTimeout(function() {
+      if(window.location.hash) {
+        const id = window.location.hash;
+        const element = document.querySelector(id);
+        if(element) {
+          window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    }, 100);
+    
     document.querySelector("#splineScene2 > canvas").style.scale = 2.33;
     if (!toggleButton) {
         console.error("ToggleButton (div) not found.");
