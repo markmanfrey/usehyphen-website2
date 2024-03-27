@@ -66,14 +66,6 @@ if (container) {
 }
 var cld = cloudinary.Cloudinary.new({ cloud_name: 'davkwryyf' });
 
-var playerSizzle = cld.videoPlayer('cloudinarySizzleVideo', {
-    autoplay: true,
-    loop: true,
-    muted: true,
-    controls: false,
-    sourceTypes: ['mp4'],
-    transformation: { quality: 'auto:best' }
-});
 var playerXray = cld.videoPlayer('cloudinaryXrayVideo', {
     autoplay: true,
     loop: true,
@@ -83,14 +75,6 @@ var playerXray = cld.videoPlayer('cloudinaryXrayVideo', {
     transformation: { quality: 'auto:best' }
 });
 var playerAzimuth = cld.videoPlayer('cloudinaryAzimuthVideo', {
-    autoplay: false,
-    loop: false,
-    muted: true,
-    controls: false,
-    sourceTypes: ['mp4'],
-    transformation: { quality: 'auto:best' }
-});
-var playerFull = cld.videoPlayer('cloudinaryFullVideo', {
     autoplay: false,
     loop: false,
     muted: true,
