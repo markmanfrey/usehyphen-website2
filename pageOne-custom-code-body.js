@@ -9,45 +9,8 @@ var subtractIcon = document.getElementById('subtractIcon');
 var container = document.getElementById('resizeMakelineLottie');
 var animation;
 const parentMask = document.getElementById('offset');
-const scrollMagicDiv = document.getElementById('scrollMagicDiv');
 const parent = document.getElementById('parent');
 const targetDiv = document.getElementById('kitchenXrayTest');
-var controller = new ScrollMagic.Controller();
-
-if (scrollMagicDiv) {
-    var stickyStopPoint = scrollMagicDiv.offsetHeight + scrollMagicDiv.offsetTop;
-    var vhInPixels = window.innerHeight * 4.5; 
-    var scene = new ScrollMagic.Scene({
-        triggerElement: '.scrollMagicDiv',
-        duration: vhInPixels,
-        triggerHook: 0,
-    })
-    .setPin(".scrollMagicDiv")
-    .addTo(controller)
-    .on("enter", function (e) {
-        document.querySelector('.content').style.opacity = '1';
-    })
-    .on("leave", function (e) {
-        document.querySelector('.content').style.opacity = '1';
-    });
-
-    var videoAzimuth = document.getElementById('cloudinaryAzimuthVideo');
-    var triggerElement = document.getElementById('triggerElement');
-    var sceneAzimuth = new ScrollMagic.Scene({
-            triggerElement: triggerElement,
-            triggerHook: 0,
-        })
-        .on("enter", function (event) {
-            videoAzimuth.play();
-        })
-        .on("leave", function (event) {
-            videoAzimuth.pause();
-            videoAzimuth.currentTime = 0;
-        })
-        .addTo(controller);
-} else {
-    console.error('Element with class "scrollMagicDiv" not found.');
-}
 
 if (container) {
     animation = lottie.loadAnimation({
