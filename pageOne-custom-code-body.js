@@ -55,7 +55,7 @@ if (container) {
         renderer: 'svg',
         loop: false,
         autoplay: false,
-        path: 'https://uploads-ssl.webflow.com/65aad9ed9c946a529975e7cd/65f49196cb643ae9171d81dd_makeline_v4-resize-CROP_2-lottie.json'
+        path: 'https://uploads-ssl.webflow.com/65aad9ed9c946a529975e7cd/660cc5723392cefdd6198b27_makeline_v4-resize-CROP_4.lottie.json'
     });
     animation.addEventListener('data_ready', function() {
         var specificFrame = 10;
