@@ -118,8 +118,8 @@ document.addEventListener("DOMContentLoaded", function() {
             const isInResize = (lastCursorX >= offsetResizeRect.left && lastCursorX <= offsetResizeRect.right &&
             lastCursorY >= offsetResizeRect.top && lastCursorY <= offsetResizeRect.bottom);
             cursorTumble.style.display = (isInKitchen) ? 'block' : 'none';
-            cursorXray.style.display = (isInXray && isOutKitchen) ? 'block' : 'none';
-            cursorResize.style.display = (isInResize && isOutXray) ? 'flex' : 'none';
+            cursorXray.style.display = (isInXray) ? 'block' : 'none';
+            cursorResize.style.display = (isInResize) ? 'block' : 'none';
 
         }
         document.addEventListener('mousemove', function(e) {
@@ -141,9 +141,9 @@ document.addEventListener("DOMContentLoaded", function() {
             }
             var addIconOpacity = parseFloat(window.getComputedStyle(addIcon).opacity);
             var addIconOpacityClamp = Math.max(.2, Math.min(addIconOpacity, 1))
-var subtractIconOpacity = parseFloat(window.getComputedStyle(subtractIcon).opacity);
-var subtractOpacityClamp = Math.max(.2, Math.min(subtractIconOpacity, 1));
-var currentFrame = animation.currentFrame;
+            var subtractIconOpacity = parseFloat(window.getComputedStyle(subtractIcon).opacity);
+            var subtractOpacityClamp = Math.max(.2, Math.min(subtractIconOpacity, 1));
+            var currentFrame = animation.currentFrame;
             console.log(`Click detected on resizeCursor. addIconOpacity: ${addIconOpacityClamp}, subtractIconOpacity: ${subtractOpacityClamp}`);
 
             if (addIconOpacityClamp > 0.5) {
